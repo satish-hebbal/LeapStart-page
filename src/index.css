@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Fonts */
+.font-lexend {
+  font-family: 'Lexend', sans-serif;
+}
+
+.font-host {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .coin-1 {
+    right: -6;
+    height: 5rem; /* Reduced size */
+  }
+
+  .coin-2 {
+    left: -15;
+    height: 3rem; /* Reduced size */
+  }
+
+  .coin-3 {
+    right: 0;
+    height: 4rem; /* Reduced size */
+  }
+
+  .coin-4 {
+    left: 0;
+    height: 6rem; /* Reduced size */
+  }
+}
+
+
+/* Apply styles to the scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+/* The thumb of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: #a9c2de; /* Customize the color */
+  border-radius: 5px; /* Rounded corners */
+  border: 2px solid #ffffff; /* Adds space around the thumb */
+}
+
+/* The scrollbar track (background) */
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Customize the background color */
+}
+
+/* Scrollbar for specific containers */
+.scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+.scroll-container::-webkit-scrollbar-track {
+  background-color: #e0e0e0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
