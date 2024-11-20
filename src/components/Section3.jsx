@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { Check } from 'lucide-react';
 import GetNow from "./GetNow";
 import C1 from "../assets/coin1.png";
 import C2 from "../assets/coin2.png";
@@ -8,6 +9,18 @@ import C3 from "../assets/coin3.png";
 import C4 from "../assets/coin4.png";
 
 const staticGradientStyle = "bg-gradient-to-r from-gray-900 via-gray-800 to-indigo-900 bg-clip-text text-transparent";
+
+const features = [
+  'Complete Market Position Analysis & Tracking',
+  'Real-time Investment Trend Insights',
+  'Unlimited Custom Survey Generation',
+  'Smart Data Sheets & Analytics Dashboard',
+  'AI-Powered Growth Recommendations',
+  'AI-Powered Growth Recommendations',
+  'Weekly Growth Challenge Emails',
+];
+
+
 
 export default function Sec3() {
   const [offsetY, setOffsetY] = useState(0);
@@ -56,7 +69,7 @@ export default function Sec3() {
             <span
                 className="text-transparent  bg-clip-text"
                 style={{
-                backgroundImage: 'linear-gradient(104deg, #d4af37,#ddbd56, #f4e1a6, #d4af37)',
+                backgroundImage: 'linear-gradient(104deg, #d4af37,#ddbd56, #d4af37, #e5cd7c)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -71,25 +84,16 @@ export default function Sec3() {
             <p className="text-sm text-gray-600">What you'll get (forever and ever)</p>
           </div>
 
-          <div className="space-y-4 p-6">
-            <ul className="space-y-3 text-sm text-gray-600">
-              <li className="flex justify-center">• Complete Market Position Analysis & Tracking</li>
-              <li className="flex justify-center">• Real-time Investment Trend Insights</li>
-              <li className="flex justify-center">• Unlimited Custom Survey Generation</li>
-              <li className="flex justify-center">• Smart Data Sheets & Analytics Dashboard</li>
-              <li className="flex justify-center">• AI-Powered Growth Recommendations</li>
-              <li className="flex justify-center">• AI-Powered Growth Recommendations</li>
-              <li className="flex justify-center">• Weekly Growth Challenge Emails</li>
-              <li className="flex justify-center">• Industry-Specific Success Metrics</li>
-              <li className="flex justify-center">• Competitor Analysis & Benchmarking</li>
-              <li className="flex justify-center">• Custom Survey Landing Pages</li>
-              <li className="flex justify-center">• Exportable Reports & Presentations</li>
-              <li className="flex justify-center">• Interactive Growth Dashboard</li>
-              <li className="flex justify-center">• Market Opportunity Alerts</li>
-              <li className="flex justify-center">• Investment Readiness Scoring</li>
-              <li className="flex justify-center">• Priority Feature Updates</li>
-            </ul>
-          </div>
+          <div className="max-w-3xl mx-auto p-6">
+      <ul className="space-y-3">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center space-x-3 text-gray-700">
+            <Check className="w-4 h-4 text-black flex-shrink-0" />
+            <span className="text-sm">{feature}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
 
           <div className="flex justify-center pb-8">
             <GetNow/>
@@ -103,7 +107,7 @@ export default function Sec3() {
             className="lg:h-64 md:h-64 h-10 absolute z-50"
             style={{ 
                 right: "2%", 
-                transform: `translateY(${offsetY * 0.11}px)`,
+                transform: `translateY(${offsetY * 0.05}px)`,
                 WebkitFilter: "blur(2px)",
                 filter: "blur(5px)"
             }}
@@ -112,19 +116,19 @@ export default function Sec3() {
         <img
           src={C2}
           className="lg:h-24 md:h-24 h-10 absolute z-10 "
-          style={{ left: "25%", transform: `translateY(${offsetY * 0.26}px)` }}
+          style={{ left: "25%", transform: `translateY(${offsetY * 0.19}px)` }}
           alt="Coin 2"
         />
         <img
           src={C3}
           className="lg:h-28 md:h-28 h-10 absolute z-0"
-          style={{ right: "23%", transform: `translateY(${offsetY * 0.23}px)` }}
+          style={{ right: "23%", transform: `translateY(${offsetY * 0.19}px)` }}
           alt="Coin 3"
         />
         <img
           src={C4}
           className="lg:h-48 md:h-48 h-10 absolute z-40"
-          style={{ left: "5%", transform: `translateY(${offsetY * 0.11}px)`,  WebkitFilter: "blur(1px)",
+          style={{ left: "5%", transform: `translateY(${offsetY * 0.06}px)`,  WebkitFilter: "blur(1px)",
           filter: "blur(5px)" }}
           alt="Coin 4"
         />
